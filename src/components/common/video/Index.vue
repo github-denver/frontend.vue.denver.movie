@@ -4,7 +4,7 @@
 
     <div class="inner_video">
       <div class="thumbnail_video">
-        <!-- <iframe class="iframe_youtube" :src="timeline[0].video" :title="timeline[0].subject" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <iframe class="iframe_youtube" :src="timeline[0].video" :title="timeline[0].subject" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <!-- <Button
           :attributes="{

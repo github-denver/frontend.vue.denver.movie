@@ -43,9 +43,9 @@
               </div>
 
               <div class="inner_container_layer">
-                <!-- <div class="box_youtube">
+                <div class="box_youtube">
                   <iframe class="iframe_youtube" :src="contents[0].video" :title="contents[0].subject" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div> -->
+                </div>
 
                 <form method="post" enctype="multipart/form-data" @submit.prevent="submit" novalidate>
                   <textarea class="textarea_comments" placeholder="이 작품에 대한 내 평가를 남겨보세요!" v-model="comment" v-if="user.name"></textarea>
