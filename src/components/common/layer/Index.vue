@@ -399,7 +399,8 @@ export default {
   outline: none;
 }
 
-.textarea_comments {
+.textarea_comments:first-child {
+  margin-top: 2.4rem;
 }
 
 .textarea_comments + .gravity_common {

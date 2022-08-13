@@ -1,53 +1,55 @@
 <template>
   <div class="area_member">
-    <Cell>
-      <template v-slot:children>
-        <Hgroup :attributes="{ heading: { tagName: 'h2', subject: '로그인', size: 'large' } }">
-          <template v-slot:description>
-            <p class="description_common">로그인해 주세요!</p>
-          </template>
-        </Hgroup>
+    <div class="inner_member">
+      <Cell>
+        <template v-slot:children>
+          <Hgroup :attributes="{ heading: { tagName: 'h2', subject: '로그인', size: 'large' } }">
+            <template v-slot:description>
+              <p class="description_common">로그인해 주세요!</p>
+            </template>
+          </Hgroup>
 
-        <form method="post" enctype="multipart/form-data" @submit.prevent="handleSignin">
-          <fieldset>
-            <legend class="accessibility">로그인</legend>
+          <form method="post" enctype="multipart/form-data" @submit.prevent="handleSignin">
+            <fieldset>
+              <legend class="accessibility">로그인</legend>
 
-            <Field :attributes="{ type: 'text', id: 'id', className: '', title: '아이디' }" @onInsert="handleInsert" />
-            <Field :attributes="{ type: 'password', id: 'password', className: '', title: '패스워드' }" @onInsert="handleInsert" />
+              <Field :attributes="{ type: 'text', id: 'id', className: '', title: '아이디' }" @onInsert="handleInsert" />
+              <Field :attributes="{ type: 'password', id: 'password', className: '', title: '패스워드' }" @onInsert="handleInsert" />
 
-            <Gravity>
-              <template v-slot:children>
-                <Half :attributes="{ className: { inner: {} } }" :styles="{ inner: { first: {} } }">
-                  <template v-slot:first>
-                    <Button
-                      :attributes="{
-                        tagName: 'router-link',
-                        name: 'main',
-                        params: {},
-                        query: {},
-                        className: 'regular round pure thick max'
-                      }"
-                    >
-                      <template v-slot:children>
-                        <span class="text_local">홈으로</span>
-                      </template>
-                    </Button>
-                  </template>
+              <Gravity>
+                <template v-slot:children>
+                  <Half :attributes="{ className: { inner: {} } }" :styles="{ inner: { first: {} } }">
+                    <template v-slot:first>
+                      <Button
+                        :attributes="{
+                          tagName: 'router-link',
+                          name: 'main',
+                          params: {},
+                          query: {},
+                          className: 'regular round pure thick max'
+                        }"
+                      >
+                        <template v-slot:children>
+                          <span class="text_local">홈으로</span>
+                        </template>
+                      </Button>
+                    </template>
 
-                  <template v-slot:second>
-                    <Button :attributes="{ type: 'submit', className: 'regular round active max' }">
-                      <template v-slot:children>
-                        <span class="text_local">로그인</span>
-                      </template>
-                    </Button>
-                  </template>
-                </Half>
-              </template>
-            </Gravity>
-          </fieldset>
-        </form>
-      </template>
-    </Cell>
+                    <template v-slot:second>
+                      <Button :attributes="{ type: 'submit', className: 'regular round active max' }">
+                        <template v-slot:children>
+                          <span class="text_local">로그인</span>
+                        </template>
+                      </Button>
+                    </template>
+                  </Half>
+                </template>
+              </Gravity>
+            </fieldset>
+          </form>
+        </template>
+      </Cell>
+    </div>
   </div>
 </template>
 
@@ -110,7 +112,17 @@ export default {
 /* area_member
 ---------- ---------- ---------- ---------- ---------- */
 .area_member {
+  overflow: auto;
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.area_member .inner_member {
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -120,8 +132,12 @@ export default {
   margin: 0 auto;
 }
 
-.area_member .outer_cell {
+.area_member .inner_member .outer_cell {
   height: 100%;
+}
+
+.area_member .inner_member > :deep(.outer_cell > .inner_cell) {
+  padding: 4.8rem 0;
 }
 
 /* hgroup_common
@@ -151,5 +167,11 @@ export default {
 
 .gravity_common :deep(.outer_half .inner_half) {
   padding-left: 2.4rem;
+}
+
+/* ========== ========== ========== ========== ==========
+////////// ////////// Media Query ////////// //////////
+========== ========== ========== ========== ========== */
+@media only screen and (max-width: 1023px) {
 }
 </style>

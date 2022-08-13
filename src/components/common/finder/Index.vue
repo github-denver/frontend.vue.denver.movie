@@ -6,7 +6,7 @@
 
     <div :class="['carousel_common', attributes.category]">
       <div class="box_carousel" v-for="(list, index) in finder.list" :key="index">
-        <a href="javascript:;" class="link_carousel">
+        <a href="javascript:;" class="link_carousel" @click="handleRouter(list.number)">
           <Thumbnail :attributes="{ image: { url: list.poster } }" />
         </a>
 
@@ -80,6 +80,15 @@ export default {
       }
 
       return result;
+    },
+    handleRouter(number) {
+      this.$router.push({
+        query: {
+          category: 'promotion',
+          layer: 'episode',
+          number
+        }
+      });
     }
   }
 };

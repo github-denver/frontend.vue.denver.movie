@@ -1,110 +1,112 @@
 <template>
   <div class="area_member">
-    <Cell>
-      <template v-slot:children>
-        <Hgroup :attributes="{ heading: { tagName: 'h2', subject: '얼마 안 남았어요!', size: 'large' } }">
-          <template v-slot:description>
-            <p class="description_common">나머지 정보를 입력해주세요!</p>
-          </template>
-        </Hgroup>
+    <div class="inner_member">
+      <Cell>
+        <template v-slot:children>
+          <Hgroup :attributes="{ heading: { tagName: 'h2', subject: '얼마 안 남았어요!', size: 'large' } }">
+            <template v-slot:description>
+              <p class="description_common">나머지 정보를 입력해주세요!</p>
+            </template>
+          </Hgroup>
 
-        <form method="post" enctype="multipart/form-data" @submit.prevent="handleProfile">
-          <fieldset>
-            <legend class="accessibility">회원가입</legend>
+          <form method="post" enctype="multipart/form-data" @submit.prevent="handleProfile">
+            <fieldset>
+              <legend class="accessibility">회원가입</legend>
 
-            <Picture :attributes="{ authorized: isUserLoggedIn, images: member.picture.result }">
-              <template v-slot:upload>
-                <Upload :attributes="{ id: 'upload', icon: 'icon_camera', text: '프로필 사진' }" @onUpload="handlePicture" />
-              </template>
-            </Picture>
+              <Picture :attributes="{ authorized: isUserLoggedIn, images: member.picture.result }">
+                <template v-slot:upload>
+                  <Upload :attributes="{ id: 'upload', icon: 'icon_camera', text: '프로필 사진' }" @onUpload="handlePicture" />
+                </template>
+              </Picture>
 
-            <Field :attributes="{ type: 'text', id: 'id', title: '아이디', value: member.id }" @onInsert="handleInsert" @onEraser="handleEraser">
-              <template v-slot:confirm>
-                <Button
-                  :attributes="{
-                    className: 'regular round active',
-                    event: () => {
-                      handleIdValidate({ id: member.id });
-                    }
-                  }"
-                >
-                  <template v-slot:children>
-                    <span class="text_local">중복 확인</span>
-                  </template>
-                </Button>
-              </template>
-            </Field>
+              <Field :attributes="{ type: 'text', id: 'id', title: '아이디', value: member.id }" @onInsert="handleInsert" @onEraser="handleEraser">
+                <template v-slot:confirm>
+                  <Button
+                    :attributes="{
+                      className: 'regular round active',
+                      event: () => {
+                        handleIdValidate({ id: member.id });
+                      }
+                    }"
+                  >
+                    <template v-slot:children>
+                      <span class="text_local">중복 확인</span>
+                    </template>
+                  </Button>
+                </template>
+              </Field>
 
-            <Field :attributes="{ type: 'password', id: 'password', title: '패스워드', value: member.password }" @onInsert="handleInsert" />
-            <Field :attributes="{ type: 'password', id: 'confirm', title: '패스워드 확인', value: member.confirm }" @onInsert="handleInsert" />
+              <Field :attributes="{ type: 'password', id: 'password', title: '패스워드', value: member.password }" @onInsert="handleInsert" />
+              <Field :attributes="{ type: 'password', id: 'confirm', title: '패스워드 확인', value: member.confirm }" @onInsert="handleInsert" />
 
-            <Field :attributes="{ type: 'text', id: 'name', title: '닉네임', value: member.name }" @onInsert="handleInsert" @onEraser="handleEraser">
-              <template v-slot:confirm>
-                <Button
-                  :attributes="{
-                    className: 'regular round active',
-                    event: () => {
-                      handleNameValidate({ name: member.name });
-                    }
-                  }"
-                >
-                  <template v-slot:children>
-                    <span class="text_local">중복 확인</span>
-                  </template>
-                </Button>
-              </template>
-            </Field>
+              <Field :attributes="{ type: 'text', id: 'name', title: '닉네임', value: member.name }" @onInsert="handleInsert" @onEraser="handleEraser">
+                <template v-slot:confirm>
+                  <Button
+                    :attributes="{
+                      className: 'regular round active',
+                      event: () => {
+                        handleNameValidate({ name: member.name });
+                      }
+                    }"
+                  >
+                    <template v-slot:children>
+                      <span class="text_local">중복 확인</span>
+                    </template>
+                  </Button>
+                </template>
+              </Field>
 
-            <Field :attributes="{ type: 'text', id: 'email', title: '이메일', value: member.email }" @onInsert="handleInsert" @onEraser="handleEraser">
-              <template v-slot:confirm>
-                <Button
-                  :attributes="{
-                    className: 'regular round active',
-                    event: () => {
-                      handleEmailValidate({ email: member.email });
-                    }
-                  }"
-                >
-                  <template v-slot:children>
-                    <span class="text_local">중복 확인</span>
-                  </template>
-                </Button>
-              </template>
-            </Field>
+              <Field :attributes="{ type: 'text', id: 'email', title: '이메일', value: member.email }" @onInsert="handleInsert" @onEraser="handleEraser">
+                <template v-slot:confirm>
+                  <Button
+                    :attributes="{
+                      className: 'regular round active',
+                      event: () => {
+                        handleEmailValidate({ email: member.email });
+                      }
+                    }"
+                  >
+                    <template v-slot:children>
+                      <span class="text_local">중복 확인</span>
+                    </template>
+                  </Button>
+                </template>
+              </Field>
 
-            <Gravity>
-              <template v-slot:children>
-                <Half :attributes="{ className: { inner: {} } }" :styles="{ inner: { first: {} } }">
-                  <template v-slot:first>
-                    <Button
-                      :attributes="{
-                        tagName: 'router-link',
-                        name: 'main',
-                        params: {},
-                        query: {},
-                        className: 'regular round pure thick max'
-                      }"
-                    >
-                      <template v-slot:children>
-                        <span class="text_local">홈으로</span>
-                      </template>
-                    </Button>
-                  </template>
+              <Gravity>
+                <template v-slot:children>
+                  <Half :attributes="{ className: { inner: {} } }" :styles="{ inner: { first: {} } }">
+                    <template v-slot:first>
+                      <Button
+                        :attributes="{
+                          tagName: 'router-link',
+                          name: 'main',
+                          params: {},
+                          query: {},
+                          className: 'regular round pure thick max'
+                        }"
+                      >
+                        <template v-slot:children>
+                          <span class="text_local">홈으로</span>
+                        </template>
+                      </Button>
+                    </template>
 
-                  <template v-slot:second>
-                    <Button :attributes="{ type: 'submit', className: 'regular round active max' }">
-                      <template v-slot:children>
-                        <span class="text_local">가입</span>
-                      </template>
-                    </Button>
-                  </template>
-                </Half>
-              </template>
-            </Gravity>
-          </fieldset>
-        </form>
-      </template>
-    </Cell>
+                    <template v-slot:second>
+                      <Button :attributes="{ type: 'submit', className: 'regular round active max' }">
+                        <template v-slot:children>
+                          <span class="text_local">가입</span>
+                        </template>
+                      </Button>
+                    </template>
+                  </Half>
+                </template>
+              </Gravity>
+            </fieldset>
+          </form>
+        </template>
+      </Cell>
+    </div>
   </div>
 </template>
 
@@ -348,7 +350,17 @@ export default {
 /* area_member
 ---------- ---------- ---------- ---------- ---------- */
 .area_member {
+  overflow: auto;
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.area_member .inner_member {
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -358,8 +370,12 @@ export default {
   margin: 0 auto;
 }
 
-.area_member .outer_cell {
+.area_member .inner_member .outer_cell {
   height: 100%;
+}
+
+.area_member .inner_member > :deep(.outer_cell > .inner_cell) {
+  padding: 4.8rem 0;
 }
 
 /* hgroup_common
@@ -389,5 +405,11 @@ export default {
 
 .gravity_common :deep(.outer_half .inner_half) {
   padding-left: 2.4rem;
+}
+
+/* ========== ========== ========== ========== ==========
+////////// ////////// Media Query ////////// //////////
+========== ========== ========== ========== ========== */
+@media only screen and (max-width: 1023px) {
 }
 </style>

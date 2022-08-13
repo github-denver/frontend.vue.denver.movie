@@ -242,6 +242,10 @@ export default {
     height: auto;
   }
 
+  .information_carousel .heading_common {
+    margin: 0;
+  }
+
   .information_carousel .title_common .text_local {
     font-size: 1.6rem;
   }

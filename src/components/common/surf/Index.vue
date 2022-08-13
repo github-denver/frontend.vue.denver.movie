@@ -6,7 +6,7 @@
 
     <div :class="['carousel_common', attributes.category]">
       <div class="box_carousel" v-for="(list, index) in popular" :key="index">
-        <a href="javascript:;" class="link_carousel">
+        <a href="javascript:;" class="link_carousel" @click="handleRouter(list.number)">
           <Thumbnail :attributes="{ image: { url: list.poster } }" />
         </a>
 
@@ -61,7 +61,16 @@ export default {
     })
   },
   methods: {
-    ...mapActions(['fetchPopular'])
+    ...mapActions(['fetchPopular']),
+    handleRouter(number) {
+      this.$router.push({
+        query: {
+          category: 'promotion',
+          layer: 'episode',
+          number
+        }
+      });
+    }
   }
 };
 </script>
