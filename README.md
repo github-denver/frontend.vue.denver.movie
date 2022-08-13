@@ -51,7 +51,7 @@
     ![](https://raw.githubusercontent.com/github-denver/images/master/denvermovie/images/009.png)
   </details>
 
-  상단 **우측**에는 [로그인](http://cf24lupin.cafe24app.com/member/login) 및 [회원가입](http://cf24lupin.cafe24app.com/welcome) 페이지로 이동할 수 있는 링크를 제공하고 있습니다.
+  상단 **우측**에는 [로그인](http://cf24lupin.cafe24app.com/member/login) 및 [회원가입](http://cf24lupin.cafe24app.com/member/register) 페이지로 이동할 수 있는 링크를 제공하고 있습니다.
   
   [코드 보기](https://github.com/github-denver/frontend.vue.denver.movie/tree/main/src/views/member/login/Index.vue)
   <details>
