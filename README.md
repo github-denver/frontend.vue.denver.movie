@@ -10,7 +10,7 @@
 <blockquote align="center">덴버무비는 Node.js와 MySQL을 사용해서 제작한 두 번째 프론트엔드 Vue.js 포트폴리오입니다.</blockquote>
 
 <p align="center">
-  <a href="http://cf24denver.cafe24app.com/">둘러보기</a>
+  <a href="http://cf24lupin.cafe24app.com">둘러보기</a>
 </p>
 
 ## 목차
@@ -51,7 +51,7 @@
     ![](https://raw.githubusercontent.com/github-denver/images/master/denvermovie/images/009.png)
   </details>
 
-  상단 **우측**에는 [로그인](http://cf24denver.cafe24app.com/member/login) 및 [회원가입](http://cf24denver.cafe24app.com/welcome) 페이지로 이동할 수 있는 링크를 제공하고 있습니다.
+  상단 **우측**에는 [로그인](http://cf24lupin.cafe24app.com/member/login) 및 [회원가입](http://cf24lupin.cafe24app.com/welcome) 페이지로 이동할 수 있는 링크를 제공하고 있습니다.
   
   [코드 보기](https://github.com/github-denver/frontend.vue.denver.movie/tree/main/src/views/member/login/Index.vue)
   <details>
