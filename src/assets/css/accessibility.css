@@ -1,0 +1,8 @@
+.accessibility {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -999.9rem;
+}

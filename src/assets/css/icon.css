@@ -1,0 +1,77 @@
+/* icon
+---------- ---------- ---------- ---------- ---------- */
+.icon_common {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0.1rem;
+  line-height: 0;
+  color: transparent;
+  background: url(../images/common/icon_common.png) 0 0 no-repeat;
+  background-size: 16rem 24rem;
+  text-indent: -999.9rem;
+  vertical-align: top;
+}
+
+.icon_burger {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon_search {
+  width: 3rem;
+  height: 3rem;
+  background-position: -7rem -7rem;
+}
+
+.icon_cross {
+  width: 2rem;
+  height: 2rem;
+  background-position: -4rem -4rem;
+}
+
+.icon_signup {
+  width: 3rem;
+  height: 3rem;
+  background-position: -10.5rem -3.5rem;
+}
+
+.icon_signin {
+  width: 3rem;
+  height: 3rem;
+  background-position: -7rem 0;
+}
+
+.icon_signout {
+  width: 3rem;
+  height: 3rem;
+  background-position: -10.5rem 0;
+}
+
+.icon_profile {
+  width: 3rem;
+  height: 3rem;
+  background-position: -3.5rem 0;
+}
+
+.icon_camera {
+  width: 3rem;
+  height: 3rem;
+  background-position: -7rem -3.5rem;
+}
+
+.icon_previous {
+  width: 3rem;
+  height: 3rem;
+  background-position: -3.5rem -7rem;
+}
+
+.icon_future {
+  width: 3rem;
+  height: 3rem;
+  background-position: -3.5rem -7rem;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

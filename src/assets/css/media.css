@@ -1,0 +1,8 @@
+/* media
+---------- ---------- ---------- ---------- ---------- */
+@media only screen and (max-width: 359px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+}

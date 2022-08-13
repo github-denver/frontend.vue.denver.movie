@@ -1,0 +1,57 @@
+/* @font-face
+---------- ---------- ---------- ---------- ---------- */
+@font-face {
+  font-style: normal;
+  font-weight: 100;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Thin.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Thin.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-Thin.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-Thin.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 200;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Light.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-Light.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-Light.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-DemiLight.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-DemiLight.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-DemiLight.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-DemiLight.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-DemiLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Regular.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-Regular.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-Regular.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Medium.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-Medium.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-Medium.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Bold.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-Bold.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-Bold.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: 'Noto Sans Korean';
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Black.eot);
+  src: url(~@/assets/fonts/notosans/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'), url(~@/assets/fonts/notosans/NotoSansKR-Black.woff2) format('woff2'), url(~@/assets/fonts/notosans/NotoSansKR-Black.woff) format('woff'), url(~@/assets/fonts/notosans/NotoSansKR-Black.ttf) format('truetype');
+}
