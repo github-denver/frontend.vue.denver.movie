@@ -9,10 +9,6 @@
 
 <blockquote align="center">덴버무비는 Node.js와 MySQL을 사용해서 제작한 두 번째 프론트엔드 Vue.js 포트폴리오입니다.</blockquote>
 
-<p align="center">
-  <a href="http://cf24lupin.cafe24app.com">둘러보기</a>
-</p>
-
 ## 목차
 * [기능](#기능)
 * [자주 묻는 질문](#자주-묻는-질문)
